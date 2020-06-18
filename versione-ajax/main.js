@@ -1,4 +1,6 @@
-// var $ = require('jquery');
+var $ = require('jquery');
+const Handlebars = require('handlebars');
+
 $(document).ready(function(){
 
     var source   = $('#cd-template').html();

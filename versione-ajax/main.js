@@ -1,3 +1,4 @@
+// var $ = require('jquery');
 $(document).ready(function(){
 
     var source   = $('#cd-template').html();
@@ -8,13 +9,11 @@ $(document).ready(function(){
         'success': function(discs){
             //ciclo for per recuperare ogni array con le info di ogni disco
             for (var i = 0; i < discs.length; i++) {
-                var disc = discs[i]
-                var author = disc.author;
-                console.log(author);
-                var genre = disc.genre;
-                var poster = disc.poster;
-                var title = disc.title;
-                var year = disc.year;
+                var author = discs[i].author;
+                var genre = discs[i].genre;
+                var poster = discs[i].poster;
+                var title = discs[i].title;
+                var year = discs[i].year;
                 //handlebars context
                 var context = {
                     'image': poster,

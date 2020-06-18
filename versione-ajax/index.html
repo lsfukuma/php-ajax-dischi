@@ -2,12 +2,27 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="../public/app.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
         <title>Versione ajax discs</title>
     </head>
     <body>
-        <div class="">
-
+        <header>
+            <img src="../src/img/spotify.svg" alt="">
+        </header>
+        <div class="discs">
         </div>
-
+        <script id="cd-template" type="text/x-handlebars-template">
+            <div class="single-disc">
+                <img src="{{image}}" alt="{{song}}">
+                <h1>{{song}}</h1>
+                <p>{{singer}}</p>
+                <p>{{type-music}}</p>
+                <p>{{released}}</p>
+            </div>
+        </script>
+        </div>
+    <script src="main.js" charset="utf-8"></script>
     </body>
 </html>

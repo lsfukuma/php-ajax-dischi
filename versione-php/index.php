@@ -4,12 +4,13 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>php ajax dischi</title>
+        <title>Versione php dischi</title>
         <link rel="stylesheet" href="../public/app.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
         <header>
+            <img src="../src/img/spotify.svg" alt="">
         </header>
         <main>
             <div class="discs">

@@ -1,4 +1,11 @@
 header {
     height: 100px;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        max-height: 80%;
+
+    }
 }

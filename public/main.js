@@ -16080,21 +16080,10 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./src/scss/app.scss":
-/*!***************************!*\
-  !*** ./src/scss/app.scss ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./versione-ajax/main.js":
-/*!*******************************!*\
-  !*** ./versione-ajax/main.js ***!
-  \*******************************/
+/***/ "./src/js/main.js":
+/*!************************!*\
+  !*** ./src/js/main.js ***!
+  \************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16106,7 +16095,7 @@ $(document).ready(function () {
   var source = $('#cd-template').html();
   var template = Handlebars.compile(source);
   $.ajax({
-    'url': 'database/dischi.php',
+    'url': '../public/database/dischi.php',
     'method': 'GET',
     'success': function success(discs) {
       //ciclo for per recuperare ogni array con le info di ogni disco
@@ -16136,14 +16125,25 @@ $(document).ready(function () {
 
 /***/ }),
 
+/***/ "./src/scss/app.scss":
+/*!***************************!*\
+  !*** ./src/scss/app.scss ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!*********************************************************!*\
-  !*** multi ./versione-ajax/main.js ./src/scss/app.scss ***!
-  \*********************************************************/
+/*!**************************************************!*\
+  !*** multi ./src/js/main.js ./src/scss/app.scss ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/html/Boolean/Exercises/php/php-ajax-dischi/versione-ajax/main.js */"./versione-ajax/main.js");
+__webpack_require__(/*! /var/www/html/Boolean/Exercises/php/php-ajax-dischi/src/js/main.js */"./src/js/main.js");
 module.exports = __webpack_require__(/*! /var/www/html/Boolean/Exercises/php/php-ajax-dischi/src/scss/app.scss */"./src/scss/app.scss");
 
 

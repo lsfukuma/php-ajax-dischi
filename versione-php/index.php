@@ -1,4 +1,4 @@
-<?php include 'dischi.php';
+<?php include '../public/database/dischi.php';
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -10,7 +10,7 @@
     </head>
     <body>
         <header>
-            <img src="../src/img/spotify.svg" alt="">
+            <img src="../public/img/spotify.svg" alt="">
         </header>
         <main>
             <div class="discs">

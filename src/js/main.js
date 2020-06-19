@@ -6,7 +6,7 @@ $(document).ready(function(){
     var source   = $('#cd-template').html();
 	var template = Handlebars.compile(source);
     $.ajax({
-        'url': 'database/dischi.php',
+        'url': '../public/database/dischi.php',
         'method': 'GET',
         'success': function(discs){
             //ciclo for per recuperare ogni array con le info di ogni disco

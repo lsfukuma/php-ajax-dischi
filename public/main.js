@@ -16092,8 +16092,15 @@ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"
 var Handlebars = __webpack_require__(/*! handlebars */ "./node_modules/handlebars/dist/cjs/handlebars.js");
 
 $(document).ready(function () {
+  //handlebars per la card cd
   var source = $('#cd-template').html();
-  var template = Handlebars.compile(source);
+  var template = Handlebars.compile(source); //compileSelect
+
+  var template1 = Handlebars.compile($('#select-template').html());
+  $('.select-artists').empty();
+  $('.select-artists').append(template1({
+    'artist': '--choose artist--'
+  }));
   $.ajax({
     'url': '../public/database/dischi.php',
     'method': 'GET',
@@ -16113,8 +16120,11 @@ $(document).ready(function () {
           'type-music': genre,
           'released': year
         };
-        var html = template(context);
-        $('.discs').append(html);
+        $('.discs').append(template(context)); //handlebars per la card cd
+
+        $('.select-artists').append(template1({
+          'artist': author
+        })); //handlebars per la select
       }
     },
     'error': function error() {
@@ -16122,6 +16132,8 @@ $(document).ready(function () {
     }
   }); //fine chiamata ajax
 }); //fine document
+//bonus aggiungere una select con i nomi degli artisti che fungerà da filtro: quando viene selezionato un artista, recuperare gli album appropriati tramite una chiamata ajax
+//il filtro per artista deve essere gestito lato backend, ciò significa che la richiesta ajax dovrebbe passare al php il nome dell'artista e il php si occcupa di filtrare i dischi. In altre parole, i dati che arrivano come risposta nella callback di success dovrebbero essere i dischi già filtrati per artista
 
 /***/ }),
 

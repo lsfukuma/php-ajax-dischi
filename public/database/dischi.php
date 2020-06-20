@@ -73,8 +73,9 @@
     ];
 
 
-// se esiste la chiamata ajax, faccio parsejson
-    if (!empty($_SERVER['HTTP_X_REQUESTED_WITH'])&& strtolower($_SERVER['HTTP_X_REQUESTED_WITH'])== 'xmlhttprequest') {
+// controllo se si fa una chiamata ajax
+    if(!empty($_SERVER['HTTP_X_REQUESTED_WITH'])&& strtolower($_SERVER['HTTP_X_REQUESTED_WITH'])== 'xmlhttprequest') {
+        // se esiste la chiamata ajax, faccio parsejson
         header('Content-Type: application/json');
         echo json_encode($dischi);
     }
